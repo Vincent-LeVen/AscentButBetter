@@ -30,7 +30,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player" && !isActivated)
         {
-            //visualEffect1.enabled = !visualEffect1.enabled;
+            visualEffect1.enabled = !visualEffect1.enabled;
             isActivated = true;
             playerController.spawnPoint = myPos;
             playerController.respawnUpsideDown = checkpointIsUpsideDown;
