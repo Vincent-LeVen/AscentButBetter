@@ -772,7 +772,7 @@ VisualEffectResource:
       = WangHash(particleIndex ^ systemSeed);\n#endif\n        \n        {\n            SetAttribute_F01429A3(
       /*inout */lifetime,  /*inout */seed, (float)3, (float)5);\n        }\n        {\n
       \           PositionSphere_0( /*inout */position,  /*inout */seed,  /*inout
-      */direction, float3(0,0,0), (float)10, (float)6.283185, (float)1);\n        }\n
+      */direction, float3(0,0,0), (float)5, (float)6.283185, (float)1);\n        }\n
       \       {\n            float tmp_p = position[0];\n            float tmp_q =
       uniform_b + tmp_p;\n            float tmp_r = position[1];\n            float2
       tmp_s = float2(tmp_q, tmp_r);\n            float3 tmp_v = GeneratePerlinNoise(tmp_s,
@@ -995,31 +995,31 @@ VisualEffectResource:
         data[0]: -1
         data[1]: -1
         data[2]: -1
+        data[3]: 5
+      - op: 1
+        valueIndex: 5
+        data[0]: -1
+        data[1]: -1
+        data[2]: -1
         data[3]: 3
       - op: 2
-        valueIndex: 7
+        valueIndex: 8
         data[0]: 1
         data[1]: 1
         data[2]: -1
         data[3]: -1
       - op: 1
-        valueIndex: 9
-        data[0]: -1
-        data[1]: -1
-        data[2]: -1
-        data[3]: 5
-      - op: 1
         valueIndex: 10
         data[0]: -1
         data[1]: -1
         data[2]: -1
-        data[3]: 3
+        data[3]: 5
       - op: 1
-        valueIndex: 13
+        valueIndex: 11
         data[0]: -1
         data[1]: -1
         data[2]: -1
-        data[3]: 5
+        data[3]: 3
       - op: 1
         valueIndex: 14
         data[0]: -1
@@ -1037,7 +1037,7 @@ VisualEffectResource:
         data[0]: -1
         data[1]: -1
         data[2]: -1
-        data[3]: 14
+        data[3]: 1
       - op: 1
         valueIndex: 17
         data[0]: -1
@@ -1049,34 +1049,34 @@ VisualEffectResource:
         data[0]: -1
         data[1]: -1
         data[2]: -1
-        data[3]: 1
+        data[3]: 14
       - op: 1
         valueIndex: 19
         data[0]: -1
         data[1]: -1
         data[2]: -1
         data[3]: 1
-      - op: 45
+      - op: 22
         valueIndex: 20
-        data[0]: 11
-        data[1]: -1
+        data[0]: 1
+        data[1]: 12
         data[2]: -1
-        data[3]: 0
+        data[3]: 1
       - op: 1
         valueIndex: 21
         data[0]: -1
         data[1]: -1
         data[2]: -1
         data[3]: 1
-      - op: 22
+      - op: 45
         valueIndex: 22
-        data[0]: 1
-        data[1]: 12
+        data[0]: 13
+        data[1]: -1
         data[2]: -1
-        data[3]: 1
+        data[3]: 0
       - op: 19
         valueIndex: 23
-        data[0]: 17
+        data[0]: 15
         data[1]: -1
         data[2]: -1
         data[3]: 1
@@ -1100,7 +1100,7 @@ VisualEffectResource:
         data[3]: 1
       - op: 24
         valueIndex: 27
-        data[0]: 17
+        data[0]: 15
         data[1]: 18
         data[2]: -1
         data[3]: 1
@@ -1192,13 +1192,13 @@ VisualEffectResource:
         - m_ExpressionIndex: 2
           m_Value: 10000
         - m_ExpressionIndex: 9
-          m_Value: 0
-        - m_ExpressionIndex: 10
           m_Value: -1
+        - m_ExpressionIndex: 10
+          m_Value: 0
+        - m_ExpressionIndex: 11
+          m_Value: 1
         - m_ExpressionIndex: 12
           m_Value: 1000
-        - m_ExpressionIndex: 13
-          m_Value: 1
         - m_ExpressionIndex: 14
           m_Value: 2
         - m_ExpressionIndex: 16
@@ -1223,9 +1223,9 @@ VisualEffectResource:
         m_Array: []
       m_Vector3f:
         m_Array:
-        - m_ExpressionIndex: 4
+        - m_ExpressionIndex: 5
           m_Value: {x: 0.3, y: 0.5, z: 2}
-        - m_ExpressionIndex: 7
+        - m_ExpressionIndex: 8
           m_Value: {x: 1, y: 0.5, z: 2}
         - m_ExpressionIndex: 29
           m_Value: {x: 0, y: 0, z: 0}
@@ -1239,9 +1239,9 @@ VisualEffectResource:
         m_Array: []
       m_Int:
         m_Array:
-        - m_ExpressionIndex: 6
+        - m_ExpressionIndex: 4
           m_Value: 1
-        - m_ExpressionIndex: 8
+        - m_ExpressionIndex: 7
           m_Value: 5
       m_Matrix4x4f:
         m_Array: []
@@ -1274,7 +1274,7 @@ VisualEffectResource:
             m_RotationOrder: 4
       m_Gradient:
         m_Array:
-        - m_ExpressionIndex: 11
+        - m_ExpressionIndex: 13
           m_Value:
             serializedVersion: 2
             key0: {r: 0.7808829, g: 1.5471698, b: 1.4009318, a: 1}
@@ -1538,9 +1538,9 @@ VisualEffectResource:
       - nameId: uniform_b
         index: 3
       - nameId: uniform_c
-        index: 15
+        index: 17
       - nameId: uniform_d
-        index: 5
+        index: 6
       - nameId: MaxSpeed_f
         index: 34
       params:
@@ -1684,7 +1684,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.ArcSphere, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"sphere":{"center":{"x":0.0,"y":0.0,"z":0.0},"radius":10.0},"arc":6.2831854820251469}'
+      m_SerializableObject: '{"sphere":{"center":{"x":0.0,"y":0.0,"z":0.0},"radius":5.0},"arc":6.2831854820251469}'
     m_Space: 0
   m_Property:
     name: ArcSphere
