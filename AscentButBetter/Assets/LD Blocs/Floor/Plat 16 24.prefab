@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 316130012942155475}
   - component: {fileID: 316130012942155484}
   m_Layer: 0
-  m_Name: Plat 16 24 Simple
+  m_Name: Plat 16 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316130012942155485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.84564, y: 5.780107, z: -104.06857}
+  m_LocalPosition: {x: 75, y: 6, z: -104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
