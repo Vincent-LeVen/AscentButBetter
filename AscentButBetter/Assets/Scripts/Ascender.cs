@@ -23,6 +23,9 @@ public class Ascender : MonoBehaviour
             if (coll.gameObject.tag == "Player")
             {
                 playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, -AscenderForce , playerRigidbody.velocity.z);
+                playerController.fallingIndicatorAlpha.a = 0f;
+                playerController.fallingIndicator.color = playerController.fallingIndicatorAlpha;
+                playerController.fallStartingH = (int)playerController.transform.position.y;
             }
         }
         else
@@ -30,10 +33,13 @@ public class Ascender : MonoBehaviour
             if (coll.gameObject.tag == "Player")
             {
                 playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, AscenderForce, playerRigidbody.velocity.z);
+                playerController.fallingIndicatorAlpha.a = 0f;
+                playerController.fallingIndicator.color = playerController.fallingIndicatorAlpha;
+                playerController.fallStartingH = (int)playerController.transform.position.y;
             }
         }
 
-
+        
         
     }
 }

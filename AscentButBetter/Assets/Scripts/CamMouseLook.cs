@@ -10,13 +10,13 @@ public class CamMouseLook : MonoBehaviour {
     public float slideSecondX;
     private float slideXMod;
 
-    [HideInInspector] GameObject character;
+    public GameObject character;
     [HideInInspector] PlayerController playerController;
     [HideInInspector] GameObject playerHolder;
 
 	// Use this for initialization
 	void Start () {
-		character = this.transform.parent.gameObject;
+		character = this.transform.parent.parent.gameObject;
         playerController = character.GetComponent<PlayerController>();
         playerHolder = GameObject.FindGameObjectWithTag("PlayerHolder");
     }

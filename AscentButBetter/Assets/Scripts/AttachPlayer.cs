@@ -29,14 +29,14 @@ public class AttachPlayer : MonoBehaviour
             if (playerController.isAttachedToOne == false && isAttaching == false)
             {
                 playerController.isAttachedToOne = true;
-                if (isCrusher == true)
+                if (isCrusher)
                 {
                     playerController.isAttachedToCrusher = true;
                 }
             }
             else if (playerController.isAttachedToOne == true && isAttaching == false)
             {
-                if (isCrusher == true || playerController.isAttachedToCrusher == true)
+                if (isCrusher || playerController.isAttachedToCrusher)
                 {
                     playerController.callDeath = true;
                 }

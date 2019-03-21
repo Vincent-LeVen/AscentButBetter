@@ -35,7 +35,7 @@ public class CheckPoint : MonoBehaviour
             playerController.spawnPoint = myPos;
             playerController.respawnUpsideDown = checkpointIsUpsideDown;
             playerController.checkpointDirection = playerDirection;
-            vfxInst = (GameObject)Instantiate(vfx2, visualEffect1.transform);
+            //vfxInst = (GameObject)Instantiate(vfx2, visualEffect1.transform);
             Destroy(vfxInst, vfx2Duration);
         }
     }
