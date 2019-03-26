@@ -25,9 +25,14 @@ public class CamMouseLook : MonoBehaviour {
 	void Update () {
        
 		Vector2 mouseDelta = new Vector2 (Input.GetAxisRaw ("Mouse X"), Input.GetAxisRaw ("Mouse Y"));
-		//Debug.Log (mouseDelta);
 
-		mouseDelta = Vector2.Scale (mouseDelta, new Vector2 (sensitivity , sensitivity ));
+        if (Input.GetAxis("Horizontal2") !=0 || Input.GetAxis("Vertical2") != 0)
+        {
+        mouseDelta = new Vector2(Input.GetAxisRaw("Horizontal2") *3, Input.GetAxisRaw("Vertical2") *3);
+        }
+        //Debug.Log (mouseDelta);
+
+        mouseDelta = Vector2.Scale (mouseDelta, new Vector2 (sensitivity , sensitivity ));
 		mouseLook += mouseDelta;
 		transform.localRotation = Quaternion.AngleAxis (-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.identity;

@@ -9,6 +9,7 @@ public class AttachPlayer : MonoBehaviour
     private PlayerController playerController;
     public bool isCrusher = false;
     private bool isAttaching = false;
+    [SerializeField] private bool isReverser = false;
 
     private void Start()
     {
@@ -25,23 +26,31 @@ public class AttachPlayer : MonoBehaviour
     {
         if (other.gameObject == Player)
         {
-            PlayerHolder.transform.parent = transform;
-            if (playerController.isAttachedToOne == false && isAttaching == false)
+            if (isReverser)
             {
-                playerController.isAttachedToOne = true;
-                if (isCrusher)
-                {
-                    playerController.isAttachedToCrusher = true;
-                }
+                playerController.InitiateRotation();
             }
-            else if (playerController.isAttachedToOne == true && isAttaching == false)
+            else
             {
-                if (isCrusher || playerController.isAttachedToCrusher)
+
+                PlayerHolder.transform.parent = transform;
+                if (playerController.isAttachedToOne == false && isAttaching == false)
                 {
-                    playerController.callDeath = true;
+                    playerController.isAttachedToOne = true;
+                    if (isCrusher)
+                    {
+                        playerController.isAttachedToCrusher = true;
+                    }
                 }
+                else if (playerController.isAttachedToOne == true && isAttaching == false)
+                {
+                    if (isCrusher || playerController.isAttachedToCrusher)
+                    {
+                        playerController.callDeath = true;
+                    }
+                }
+                isAttaching = true;
             }
-            isAttaching = true;
         }
         
     }
