@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 6b8c054bbe253484a94af93e599c4f1f
-timeCreated: 1549556048
-licenseType: Store
+guid: 8630021ba0f9fed499d1e4187767b5bf
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
   iconMap: {}
   executionOrder: {}
+  defineConstraints: []
   isPreloaded: 0
   isOverridable: 0
+  isExplicitlyReferenced: 0
   platformData:
   - first:
       '': OSXIntel
